@@ -1,0 +1,160 @@
+"use client";
+import React, { useState, useEffect } from "react";
+import { X } from "lucide-react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  // CarouselNext,
+  // CarouselPrevious,
+  type CarouselApi,
+} from "@/components/ui/carousel";
+
+const Gallery = () => {
+  const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(
+    null
+  );
+  const [api, setApi] = useState<CarouselApi>();
+
+  useEffect(() => {
+    if (!api) return;
+
+    // Set the initial slide when carousel opens
+    if (selectedImageIndex !== null) {
+      api.scrollTo(selectedImageIndex);
+    }
+  }, [api, selectedImageIndex]);
+
+  const images = [
+    {
+      src: "https://images.unsplash.com/photo-1501854140801-50d01698950b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      alt: "Mountain vista from luxury tent",
+    },
+    {
+      src: "https://images.unsplash.com/photo-1518495973542-4542c06a5843?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      alt: "Forest cottage exterior",
+    },
+    {
+      src: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      alt: "Riverside dome reflection",
+    },
+    {
+      src: "https://images.unsplash.com/photo-1472396961693-142e6e269027?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      alt: "Wildlife deer in nature",
+    },
+    {
+      src: "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      alt: "Towering pine forest",
+    },
+    {
+      src: "https://images.unsplash.com/photo-1500673922987-e212871fec22?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      alt: "Evening campfire ambiance",
+    },
+    {
+      src: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      alt: "Misty mountain morning",
+    },
+    {
+      src: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      alt: "Golden hour landscape",
+    },
+  ];
+
+  return (
+    <section id="gallery" className="py-20 bg-emerald-50">
+      <div className="container mx-auto px-6">
+        <div className="text-center mb-16 scroll-reveal">
+          <h2 className="font-serif text-4xl md:text-5xl font-bold text-forest-800 mb-6">
+            Moments of Wonder
+          </h2>
+          <p className="text-xl text-forest-600 max-w-3xl mx-auto">
+            Discover the beauty that awaits you through our lens. Each moment
+            captures the essence of luxury in harmony with nature.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          {images.map((image, index) => (
+            <div
+              key={index}
+              className="relative group cursor-pointer overflow-hidden rounded-lg scroll-reveal hover:scale-105 transition-transform duration-500"
+              style={{ animationDelay: `${index * 100}ms` }}
+              onClick={() => setSelectedImageIndex(index)}
+            >
+              <img
+                src={image.src}
+                alt={image.alt}
+                className="w-full h-64 object-cover transition-all duration-500 group-hover:brightness-75"
+              />
+              <div className="absolute inset-0 bg-forest-900/0 group-hover:bg-forest-900/20 transition-all duration-300 flex items-center justify-center">
+                <div className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-sm font-medium">
+                  View Full Size
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Lightbox with Carousel */}
+      {selectedImageIndex !== null && (
+        <div
+          className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
+          onClick={() => setSelectedImageIndex(null)}
+        >
+          <div className="relative w-full max-w-7xl">
+            <button
+              className="absolute -top-16 right-4 text-white hover:text-sand-200 transition-colors z-20"
+              onClick={(e) => {
+                e.stopPropagation();
+                setSelectedImageIndex(null);
+              }}
+            >
+              <X className="w-8 h-8" />
+            </button>
+
+            <Carousel
+              setApi={setApi}
+              opts={{
+                loop: true,
+                startIndex: selectedImageIndex,
+              }}
+              className="w-full"
+            >
+              <CarouselContent>
+                {images.map((image, index) => (
+                  <CarouselItem key={index}>
+                    <div className="flex items-center justify-center h-[80vh] px-4">
+                      <img
+                        src={image.src}
+                        alt={image.alt}
+                        className="max-w-full max-h-full object-contain rounded-lg shadow-2xl"
+                        onClick={(e) => e.stopPropagation()}
+                        style={{
+                          maxWidth: "90vw",
+                          maxHeight: "80vh",
+                        }}
+                      />
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+
+              {/* <CarouselPrevious
+                className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 border-white/20 text-white hover:bg-black/70 hover:text-white w-12 h-12 z-10"
+                onClick={(e) => e.stopPropagation()}
+              />
+
+              <CarouselNext
+                className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 border-white/20 text-white hover:bg-black/70 hover:text-white w-12 h-12 z-10"
+                onClick={(e) => e.stopPropagation()}
+              /> */}
+            </Carousel>
+          </div>
+        </div>
+      )}
+    </section>
+  );
+};
+
+export default Gallery;
