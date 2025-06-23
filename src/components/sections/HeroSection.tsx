@@ -33,7 +33,7 @@ export const HeroSection = () => {
   };
 
   return (
-    <section id="home" className="relative min-h-svh overflow-hidden">
+    <section id="home" className="relative h-svh overflow-hidden">
       {/* Background Image Slider */}
       <div className="absolute inset-0">
         {heroImages.map((image, index) => (
