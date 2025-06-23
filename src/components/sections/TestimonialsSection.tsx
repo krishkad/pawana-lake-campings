@@ -66,7 +66,7 @@ const Testimonials = () => {
             Guest Stories
           </h2>
           <p className="text-xl text-forest-600 max-w-3xl mx-auto">
-            Hear from our guests about their transformative experiences in nature's embrace.
+            Hear from our guests about their transformative experiences in nature&apos;s embrace.
           </p>
         </div>
 
@@ -99,7 +99,7 @@ const Testimonials = () => {
               </div>
               
               <blockquote className="text-xl md:text-2xl text-forest-700 mb-8 leading-relaxed font-light italic">
-                "{testimonials[currentTestimonial].text}"
+                &quot;{testimonials[currentTestimonial].text}&quot;
               </blockquote>
               
               <div className="flex items-center justify-center space-x-4">

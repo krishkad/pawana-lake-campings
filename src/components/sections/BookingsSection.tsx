@@ -49,7 +49,7 @@ const Booking = () => {
               Make Your Reservation
             </h2>
             <p className="text-xl text-forest-600 max-w-2xl mx-auto">
-              Ready to escape to nature? Fill out the form below and we'll get
+              Ready to escape to nature? Fill out the form below and we&apos;ll get
               back to you within 24 hours to confirm your perfect wilderness
               getaway.
             </p>
@@ -187,7 +187,7 @@ const Booking = () => {
                     Submit Booking Request
                   </Button>
                   <p className="text-sm text-forest-500 mt-4">
-                    * Required fields • We'll contact you within 24 hours to
+                    * Required fields • We&apos;ll contact you within 24 hours to
                     confirm availability and pricing
                   </p>
                 </div>

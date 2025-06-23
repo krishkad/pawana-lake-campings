@@ -13,7 +13,7 @@ export const Footer = () => {
             </h3>
             <p className="text-slate-300 leading-relaxed mb-6">
               Experience the perfect blend of adventure and luxury amidst the pristine beauty 
-              of Pawana Lake. Your gateway to unforgettable memories in nature's embrace.
+              of Pawana Lake. Your gateway to unforgettable memories in nature&apos;s embrace.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="p-2 bg-slate-800 rounded-full hover:bg-emerald-600 transition-colors">

@@ -45,7 +45,7 @@ export const ActivitiesSection = () => {
               Adventure <span className="text-emerald-600">Activities</span>
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Endless opportunities for adventure and relaxation in nature's embrace
+              Endless opportunities for adventure and relaxation in nature&apos;s embrace
             </p>
           </div>
 

@@ -36,7 +36,7 @@ const Contact = () => {
             Get in Touch
           </h2>
           <p className="text-xl text-emerald-600 max-w-3xl mx-auto">
-            Ready to plan your perfect getaway? We're here to help you create unforgettable memories in nature.
+            Ready to plan your perfect getaway? We&apos;re here to help you create unforgettable memories in nature.
           </p>
         </div>
 
