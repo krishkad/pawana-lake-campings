@@ -1,17 +1,11 @@
 "use client";
 
-
-
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useRouter } from "next/navigation";
 
-const heroImages = [
-  "https://images.unsplash.com/photo-1500673922987-e212871fec22?w=1920&h=1080&fit=crop",
-  "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?w=1920&h=1080&fit=crop",
-  "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1920&h=1080&fit=crop"
-];
+const heroImages = ["hero-1.webp", "hero-2.webp", "hero-3.webp"];
 
 export const HeroSection = () => {
   const [currentImage, setCurrentImage] = useState(0);
@@ -29,7 +23,9 @@ export const HeroSection = () => {
   };
 
   const prevImage = () => {
-    setCurrentImage((prev) => (prev - 1 + heroImages.length) % heroImages.length);
+    setCurrentImage(
+      (prev) => (prev - 1 + heroImages.length) % heroImages.length
+    );
   };
 
   return (
@@ -43,6 +39,7 @@ export const HeroSection = () => {
               index === currentImage ? "opacity-100" : "opacity-0"
             }`}
           >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={image}
               alt={`Pawana Lake Camping ${index + 1}`}
@@ -71,15 +68,14 @@ export const HeroSection = () => {
       <div className="relative z-10 h-full flex items-center justify-center text-center">
         <div className="max-w-4xl mx-auto px-6">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 animate-fade-in">
-            Welcome to{" "}
-            <span className="text-emerald-400">Pawana Lake</span>{" "}
+            Welcome to <span className="text-emerald-400">Pawana Lake</span>{" "}
             Camping
           </h1>
           <p className="text-xl md:text-2xl text-white/90 mb-8 animate-fade-in">
             Experience the magic of nature in luxury comfort
           </p>
-          <Button 
-            size="lg" 
+          <Button
+            size="lg"
             className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 text-lg rounded-full shadow-lg hover:shadow-xl transition-all transform hover:scale-105"
             onClick={() => router.push("#booking")}
           >

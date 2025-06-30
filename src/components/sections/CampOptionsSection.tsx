@@ -4,7 +4,7 @@ import { Wifi, Car, Utensils, Zap, Waves, Mountain } from "lucide-react";
 const campTypes = [
   {
     name: "Luxury Tent",
-    image: "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=600&h=400&fit=crop",
+    image: "/images/camp-1.webp",
     description: "Spacious canvas tents with premium bedding and private bathrooms",
     amenities: [
       { icon: Wifi, label: "WiFi" },
@@ -12,11 +12,11 @@ const campTypes = [
       { icon: Utensils, label: "Dining" },
       { icon: Car, label: "Parking" }
     ],
-    price: "₹3,500/person"
+    price: "₹999/person"
   },
   {
     name: "Glamping Dome",
-    image: "https://images.unsplash.com/photo-1500673922987-e212871fec22?w=600&h=400&fit=crop",
+    image: "/images/camp-2.webp",
     description: "Modern geodesic domes with panoramic lake views and luxury amenities",
     amenities: [
       { icon: Wifi, label: "WiFi" },
@@ -24,20 +24,20 @@ const campTypes = [
       { icon: Waves, label: "Lake View" },
       { icon: Utensils, label: "Kitchenette" }
     ],
-    price: "₹5,500/person"
+    price: "₹1,200/person"
   },
-  {
-    name: "Treehouse Suite",
-    image: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=600&h=400&fit=crop",
-    description: "Elevated wooden cabins nestled among trees for the ultimate nature experience",
-    amenities: [
-      { icon: Mountain, label: "Tree View" },
-      { icon: Zap, label: "Electricity" },
-      { icon: Utensils, label: "Breakfast" },
-      { icon: Wifi, label: "WiFi" }
-    ],
-    price: "₹4,200/person"
-  }
+  // {
+  //   name: "Treehouse Suite",
+  //   image: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=600&h=400&fit=crop",
+  //   description: "Elevated wooden cabins nestled among trees for the ultimate nature experience",
+  //   amenities: [
+  //     { icon: Mountain, label: "Tree View" },
+  //     { icon: Zap, label: "Electricity" },
+  //     { icon: Utensils, label: "Breakfast" },
+  //     { icon: Wifi, label: "WiFi" }
+  //   ],
+  //   price: "₹4,200/person"
+  // }
 ];
 
 export const CampOptionsSection = () => {
@@ -53,10 +53,11 @@ export const CampOptionsSection = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
           {campTypes.map((camp, index) => (
             <Card key={index} className="group overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 p-0">
               <div className="relative overflow-hidden">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={camp.image}
                   alt={camp.name}

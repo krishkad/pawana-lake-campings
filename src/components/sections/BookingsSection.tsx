@@ -6,6 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Calendar, Users, User, Mail, Phone } from "lucide-react";
+import { format } from "date-fns";
 
 const Booking = () => {
   const [bookingData, setBookingData] = useState({
@@ -15,17 +16,33 @@ const Booking = () => {
     checkIn: "",
     checkOut: "",
     guests: 2,
-    accommodation: "",
     specialRequests: "",
   });
+
+  const adminPhoneNumber = '919529840159'; // Change to your number (no +)
 
   const handleBookingSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log("Booking submitted:", bookingData);
     // Handle booking submission logic here
-    alert(
-      "Thank you for your booking request! We will contact you within 24 hours to confirm your reservation."
-    );
+    const checkInStr = bookingData.checkIn
+      ? format(bookingData.checkIn, "PPP")
+      : "Not selected";
+    const checkOutStr = bookingData.checkOut
+      ? format(bookingData.checkOut, "PPP")
+      : "Not selected";
+
+    const text = `New Camping Booking:%0A
+Name: ${bookingData.name}%0A
+Mobile: +91${bookingData.phone}%0A
+Check-in: ${checkInStr}%0A
+Check-out: ${checkOutStr}%0A
+Special Request: ${bookingData.specialRequests}`;
+
+    const url = `https://wa.me/${adminPhoneNumber}?text=${encodeURIComponent(
+      text
+    )}`;
+    window.open(url, "_blank");
   };
 
   const handleChange = (
@@ -49,8 +66,8 @@ const Booking = () => {
               Make Your Reservation
             </h2>
             <p className="text-xl text-forest-600 max-w-2xl mx-auto">
-              Ready to escape to nature? Fill out the form below and we&apos;ll get
-              back to you within 24 hours to confirm your perfect wilderness
+              Ready to escape to nature? Fill out the form below and we&apos;ll
+              get back to you within 24 hours to confirm your perfect wilderness
               getaway.
             </p>
           </div>
@@ -164,7 +181,6 @@ const Booking = () => {
                   </div>
                 </div>
 
-          
                 <div>
                   <label className="block text-forest-700 font-medium mb-2">
                     Special Requests or Notes
@@ -187,8 +203,8 @@ const Booking = () => {
                     Submit Booking Request
                   </Button>
                   <p className="text-sm text-forest-500 mt-4">
-                    * Required fields • We&apos;ll contact you within 24 hours to
-                    confirm availability and pricing
+                    * Required fields • We&apos;ll contact you within 24 hours
+                    to confirm availability and pricing
                   </p>
                 </div>
               </form>

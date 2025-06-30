@@ -10,17 +10,17 @@ const activities = [
   },
   {
     name: "Lake Kayaking",
-    image: "https://images.unsplash.com/photo-1500673922987-e212871fec22?w=400&h=300&fit=crop",
+    image: "/images/boat-1.webp",
     description: "Paddle through the serene waters and explore hidden coves"
   },
   {
     name: "Nature Hiking",
-    image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=400&h=300&fit=crop",
+    image: "/images/pawana-lake-nature.webp",
     description: "Discover scenic trails and breathtaking viewpoints"
   },
   {
     name: "Stargazing",
-    image: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=400&h=300&fit=crop",
+    image: "https://images.unsplash.com/photo-1527871899604-f1425bcce779?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     description: "Marvel at the brilliant night sky away from city lights"
   }
 ];
@@ -53,6 +53,7 @@ export const ActivitiesSection = () => {
             {activities.map((activity, index) => (
               <Card key={index} className="group overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 p-0">
                 <div className="relative overflow-hidden">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={activity.image}
                     alt={activity.name}

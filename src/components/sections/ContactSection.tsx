@@ -1,30 +1,48 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
-import { MapPin, Phone, Mail, MessageCircle } from 'lucide-react';
+import { MapPin, Phone, MessageCircle } from "lucide-react";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    message: ''
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
   });
+
+
+   const adminPhoneNumber = '919529840159'; // Change to your number (no +)
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+    console.log("Form submitted:", formData);
     // Handle form submission logic here
+
+    // const checkInStr = checkIn ? format(checkIn, "PPP") : "Not selected";
+    // const checkOutStr = checkOut ? format(checkOut, "PPP") : "Not selected";
+
+    const text = `New Camping Inquiry:%0A
+Name: ${formData.name}%0A
+Mobile: +91${formData.phone}%0A
+Message: ${formData.message}`;
+
+    const url = `https://wa.me/${adminPhoneNumber}?text=${encodeURIComponent(
+      text
+    )}`;
+    window.open(url, "_blank");
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
@@ -36,7 +54,8 @@ const Contact = () => {
             Get in Touch
           </h2>
           <p className="text-xl text-emerald-600 max-w-3xl mx-auto">
-            Ready to plan your perfect getaway? We&apos;re here to help you create unforgettable memories in nature.
+            Ready to plan your perfect getaway? We&apos;re here to help you
+            create unforgettable memories in nature.
           </p>
         </div>
 
@@ -54,37 +73,44 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="font-medium text-emerald-800">Address</p>
-                    <p className="text-emerald-600">123 Mountain View Road, Pine Valley, CA 92345</p>
+                    <p className="text-emerald-600">
+                      Pawna lake camping, Pawna nagar, Tq Maval ( Lonavala )
+                      Dist Pune
+                    </p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center">
                     <Phone className="w-5 h-5 text-emerald-600" />
                   </div>
                   <div>
                     <p className="font-medium text-emerald-800">Phone</p>
-                    <p className="text-emerald-600">(555) 123-4567</p>
+                    <p className="text-emerald-600">
+                      +91 93735 26309 / +91 93735 26309
+                    </p>
                   </div>
                 </div>
-                
-                <div className="flex items-center space-x-4">
+
+                {/* <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center">
                     <Mail className="w-5 h-5 text-emerald-600" />
                   </div>
                   <div>
                     <p className="font-medium text-emerald-800">Email</p>
-                    <p className="text-emerald-600">hello@wildwoodretreat.com</p>
+                    <p className="text-emerald-600">
+                      hello@wildwoodretreat.com
+                    </p>
                   </div>
-                </div>
-                
+                </div> */}
+
                 <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center">
                     <MessageCircle className="w-5 h-5 text-emerald-600" />
                   </div>
                   <div>
                     <p className="font-medium text-emerald-800">WhatsApp</p>
-                    <p className="text-emerald-600">(555) 123-4567</p>
+                    <p className="text-emerald-600">+91 93735 26309</p>
                   </div>
                 </div>
               </div>
@@ -98,16 +124,24 @@ const Contact = () => {
                 </h4>
                 <div className="space-y-3 text-sm">
                   <div>
-                    <p className="font-medium text-emerald-700">Check-in time?</p>
-                    <p className="text-emerald-600">3:00 PM - 8:00 PM</p>
+                    <p className="font-medium text-emerald-700">
+                      Check-in time?
+                    </p>
+                    <p className="text-emerald-600">4:00 PM - 8:00 PM</p>
                   </div>
                   <div>
                     <p className="font-medium text-emerald-700">Pet policy?</p>
-                    <p className="text-emerald-600">Well-behaved pets welcome with prior notice</p>
+                    <p className="text-emerald-600">
+                      Well-behaved pets welcome with prior notice
+                    </p>
                   </div>
                   <div>
-                    <p className="font-medium text-emerald-700">Cancellation?</p>
-                    <p className="text-emerald-600">Free cancellation up to 48 hours before arrival</p>
+                    <p className="font-medium text-emerald-700">
+                      Cancellation?
+                    </p>
+                    <p className="text-emerald-600">
+                      Free cancellation up to 48 hours before arrival
+                    </p>
                   </div>
                 </div>
               </CardContent>
@@ -123,7 +157,10 @@ const Contact = () => {
                 </h3>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-emerald-700 mb-2">
+                    <label
+                      htmlFor="name"
+                      className="block text-sm font-medium text-emerald-700 mb-2"
+                    >
                       Full Name
                     </label>
                     <Input
@@ -136,9 +173,12 @@ const Contact = () => {
                       required
                     />
                   </div>
-                  
+
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-emerald-700 mb-2">
+                    <label
+                      htmlFor="email"
+                      className="block text-sm font-medium text-emerald-700 mb-2"
+                    >
                       Email Address
                     </label>
                     <Input
@@ -151,9 +191,12 @@ const Contact = () => {
                       required
                     />
                   </div>
-                  
+
                   <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-emerald-700 mb-2">
+                    <label
+                      htmlFor="phone"
+                      className="block text-sm font-medium text-emerald-700 mb-2"
+                    >
                       Phone Number
                     </label>
                     <Input
@@ -165,9 +208,12 @@ const Contact = () => {
                       className="border-emerald-200 focus:border-emerald-400"
                     />
                   </div>
-                  
+
                   <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-emerald-700 mb-2">
+                    <label
+                      htmlFor="message"
+                      className="block text-sm font-medium text-emerald-700 mb-2"
+                    >
                       Message
                     </label>
                     <Textarea
@@ -181,8 +227,11 @@ const Contact = () => {
                       required
                     />
                   </div>
-                  
-                  <Button type="submit" className="px-8 py-4 bg-emerald-600 text-white font-medium rounded-full hover:bg-emerald-700 transition-all duration-300 hover:shadow-lg hover:scale-105 w-full">
+
+                  <Button
+                    type="submit"
+                    className="px-8 py-4 bg-emerald-600 text-white font-medium rounded-full hover:bg-emerald-700 transition-all duration-300 hover:shadow-lg hover:scale-105 w-full"
+                  >
                     Send Message
                   </Button>
                 </form>

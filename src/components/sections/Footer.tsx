@@ -2,6 +2,8 @@
 import { Facebook, Instagram, Twitter, Youtube } from "lucide-react";
 
 export const Footer = () => {
+
+  const currentYear = new Date().getFullYear();
   return (
     <footer className="bg-slate-900 text-white py-16">
       <div className="max-w-7xl mx-auto px-6">
@@ -47,11 +49,10 @@ export const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Contact</h4>
             <ul className="space-y-2 text-slate-300">
-              <li>Phone: +91 98765 43210</li>
-              <li>Email: info@pawanalakecamping.com</li>
+              <li>Phone: +91 93735 26309</li>
+              {/* <li>Email: info@pawanalakecamping.com</li> */}
               <li>
-                Address: Pawana Lake, Lonavala,<br />
-                Maharashtra 410401
+                Address: Pawna lake camping, Pawna nagar, Tq Maval ( Lonavala ) Dist Pune
               </li>
             </ul>
           </div>
@@ -60,7 +61,7 @@ export const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-slate-700 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-slate-400">
-            © 2024 Pawana Lake Camping. All rights reserved.
+            © {currentYear} Pawana Lake Camping. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <a href="#" className="text-slate-400 hover:text-emerald-400 transition-colors">Privacy Policy</a>

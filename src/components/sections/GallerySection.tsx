@@ -27,35 +27,35 @@ const Gallery = () => {
 
   const images = [
     {
-      src: "https://images.unsplash.com/photo-1501854140801-50d01698950b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      src: "hero-1.webp",
       alt: "Mountain vista from luxury tent",
     },
     {
-      src: "https://images.unsplash.com/photo-1518495973542-4542c06a5843?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      src: "hero-2.webp",
       alt: "Forest cottage exterior",
     },
     {
-      src: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      src: "hero-3.webp",
       alt: "Riverside dome reflection",
     },
     {
-      src: "https://images.unsplash.com/photo-1472396961693-142e6e269027?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      src: "/images/boat-1.webp",
       alt: "Wildlife deer in nature",
     },
     {
-      src: "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      src: "/images/pawana-lake-nature.webp",
       alt: "Towering pine forest",
     },
     {
-      src: "https://images.unsplash.com/photo-1500673922987-e212871fec22?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      src: "/images/pawana-lake-camping-1.webp",
       alt: "Evening campfire ambiance",
     },
     {
-      src: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      src: "/images/camp-3.webp",
       alt: "Misty mountain morning",
     },
     {
-      src: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      src: "/images/camp-4.webp",
       alt: "Golden hour landscape",
     },
   ];
@@ -81,6 +81,7 @@ const Gallery = () => {
               style={{ animationDelay: `${index * 100}ms` }}
               onClick={() => setSelectedImageIndex(index)}
             >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={image.src}
                 alt={image.alt}
@@ -125,6 +126,7 @@ const Gallery = () => {
                 {images.map((image, index) => (
                   <CarouselItem key={index}>
                     <div className="flex items-center justify-center h-[80vh] px-4">
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img
                         src={image.src}
                         alt={image.alt}

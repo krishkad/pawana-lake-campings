@@ -5,10 +5,11 @@ export const AboutSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Image */}
           <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=800&h=600&fit=crop"
+              src="/images/pawana-lake-camping-1.webp"
               alt="Pawana Lake Nature"
-              className="w-full h-[500px] object-cover hover:scale-105 transition-transform duration-700"
+              className="w-full h-[500px] object-cover object-bottom hover:scale-105 transition-transform duration-700"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
           </div>
