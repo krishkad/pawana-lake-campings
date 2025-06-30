@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useRouter } from "next/navigation";
 
-const heroImages = ["hero-1.webp", "hero-2.webp", "hero-3.webp"];
+const heroImages = ["/hero-1.webp", "/hero-2.webp", "/hero-3.webp"];
 
 export const HeroSection = () => {
   const [currentImage, setCurrentImage] = useState(0);

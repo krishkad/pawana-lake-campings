@@ -27,15 +27,15 @@ const Gallery = () => {
 
   const images = [
     {
-      src: "hero-1.webp",
+      src: "/hero-1.webp",
       alt: "Mountain vista from luxury tent",
     },
     {
-      src: "hero-2.webp",
+      src: "/hero-2.webp",
       alt: "Forest cottage exterior",
     },
     {
-      src: "hero-3.webp",
+      src: "/hero-3.webp",
       alt: "Riverside dome reflection",
     },
     {

@@ -20,7 +20,7 @@ const campTypes = [
     description: "Modern geodesic domes with panoramic lake views and luxury amenities",
     amenities: [
       { icon: Wifi, label: "WiFi" },
-      { icon: Zap, label: "AC" },
+      { icon: Zap, label: "Bonefire" },
       { icon: Waves, label: "Lake View" },
       { icon: Utensils, label: "Kitchenette" }
     ],

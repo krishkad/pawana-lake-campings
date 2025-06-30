@@ -1,37 +1,80 @@
-import { Sunrise, Sun, Sunset, Moon } from "lucide-react";
+import {
+  Sunrise,
+  Sun,
+  Sunset,
+  Moon,
+  TentTree,
+  Coffee,
+  Drum,
+  UtensilsCrossed,
+  Music2,
+  Flame,
+  EggFried,
+} from "lucide-react";
 
 const timelineEvents = [
   {
+    icon: Sun,
+    time: "4:00 PM",
+    title: "Check-in & Tent Allotment",
+    description: "Welcome to the campsite! Settle into your tent and soak in the lakeside views as you arrive.",
+    color: "bg-green-100 text-green-600",
+  },
+  {
+    icon: Coffee,
+    time: "5:30 PM",
+    title: "Evening Snacks & Tea",
+    description: "Recharge with hot tea and snacks while watching the sun begin to set over the lake.",
+    color: "bg-yellow-100 text-yellow-600",
+  },
+  {
+    icon: Drum,
+    time: "6:30 PM",
+    title: "Fun Games",
+    description: "Enjoy interactive games, activities, and bonding moments with fellow campers.",
+    color: "bg-blue-100 text-blue-600",
+  },
+  {
+    icon: Flame,
+    time: "8:00 PM",
+    title: "BBQ & Bonfire",
+    description: "Enjoy freshly grilled BBQ under the stars as the bonfire keeps you warm and cozy.",
+    color: "bg-orange-100 text-orange-600",
+  },
+  {
+    icon: UtensilsCrossed,
+    time: "10:00 PM",
+    title: "Unlimited Dinner",
+    description: "Satisfy your appetite with a delicious unlimited dinner served at the campsite.",
+    color: "bg-red-100 text-red-600",
+  },
+  {
+    icon: Music2,
+    time: "10:30 PM",
+    title: "Music & Chill",
+    description: "Relax with some soft music, conversations, or stargazing by the lake.",
+    color: "bg-purple-100 text-purple-600",
+  },
+  {
+    icon: Moon,
+    time: "11:30 PM",
+    title: "Rest & Recharge",
+    description: "Get cozy inside your tent with bedding provided. Enjoy a peaceful sleep by the lakeside.",
+    color: "bg-gray-100 text-gray-600",
+  },
+  {
     icon: Sunrise,
-    time: "6:00 AM",
-    title: "Morning Bliss",
-    description:
-      "Wake up to birds chirping and the gentle mist over Pawana Lake. Enjoy fresh coffee as the sun paints the sky.",
+    time: "9:00 AM",
+    title: "Morning Breakfast",
+    description: "Start your day with a hot breakfast and a stunning sunrise over the lake.",
     color: "bg-yellow-100 text-yellow-600",
   },
   {
     icon: Sun,
-    time: "10:00 AM",
-    title: "Adventure Time",
-    description:
-      "Kayaking, hiking, or simply relaxing by the lake. Choose your own adventure in nature's playground.",
-    color: "bg-orange-100 text-orange-600",
-  },
-  {
-    icon: Sunset,
-    time: "7:00 PM",
-    title: "Golden Hours",
-    description:
-      "Watch the spectacular sunset over the lake while enjoying local delicacies and good company.",
-    color: "bg-red-100 text-red-600",
-  },
-  {
-    icon: Moon,
-    time: "9:00 PM",
-    title: "Starlit Nights",
-    description:
-      "Gather around the bonfire, share stories, and gaze at the brilliant stars in the unpolluted sky.",
-    color: "bg-purple-100 text-purple-600",
+    time: "11:30 AM",
+    title: "Check-out",
+    description: "Pack your bags with happy memories and prepare to leave the campsite.",
+    color: "bg-green-100 text-green-600",
   },
 ];
 

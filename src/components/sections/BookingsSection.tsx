@@ -19,7 +19,7 @@ const Booking = () => {
     specialRequests: "",
   });
 
-  const adminPhoneNumber = '919529840159'; // Change to your number (no +)
+  const adminPhoneNumber = "919373526309"; // Change to your number (no +)
 
   const handleBookingSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -32,11 +32,11 @@ const Booking = () => {
       ? format(bookingData.checkOut, "PPP")
       : "Not selected";
 
-    const text = `New Camping Booking:%0A
-Name: ${bookingData.name}%0A
-Mobile: +91${bookingData.phone}%0A
-Check-in: ${checkInStr}%0A
-Check-out: ${checkOutStr}%0A
+    const text = `New Camping Booking:
+Name: ${bookingData.name}
+Mobile: +91${bookingData.phone}
+Check-in: ${checkInStr}
+Check-out: ${checkOutStr}
 Special Request: ${bookingData.specialRequests}`;
 
     const url = `https://wa.me/${adminPhoneNumber}?text=${encodeURIComponent(

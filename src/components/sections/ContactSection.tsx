@@ -16,7 +16,7 @@ const Contact = () => {
   });
 
 
-   const adminPhoneNumber = '919529840159'; // Change to your number (no +)
+   const adminPhoneNumber = '919373526309'; // Change to your number (no +)
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -26,9 +26,9 @@ const Contact = () => {
     // const checkInStr = checkIn ? format(checkIn, "PPP") : "Not selected";
     // const checkOutStr = checkOut ? format(checkOut, "PPP") : "Not selected";
 
-    const text = `New Camping Inquiry:%0A
-Name: ${formData.name}%0A
-Mobile: +91${formData.phone}%0A
+    const text = `New Camping Inquiry:
+Name: ${formData.name}
+Mobile: +91${formData.phone}
 Message: ${formData.message}`;
 
     const url = `https://wa.me/${adminPhoneNumber}?text=${encodeURIComponent(
