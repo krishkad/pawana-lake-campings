@@ -1,15 +1,12 @@
 import {
-  Sunrise,
-  Sun,
-  Sunset,
-  Moon,
-  TentTree,
   Coffee,
   Drum,
-  UtensilsCrossed,
-  Music2,
   Flame,
-  EggFried,
+  Moon,
+  Music2,
+  Sun,
+  Sunrise,
+  UtensilsCrossed
 } from "lucide-react";
 
 const timelineEvents = [
