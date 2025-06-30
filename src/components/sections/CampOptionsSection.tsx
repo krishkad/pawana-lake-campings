@@ -1,5 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Wifi, Car, Utensils, Zap, Waves, Mountain } from "lucide-react";
+import { Car, Utensils, Waves, Wifi, Zap } from "lucide-react";
 
 const campTypes = [
   {
