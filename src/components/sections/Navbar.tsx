@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 interface NavigationProps {
   isScrolled: boolean;
@@ -13,11 +14,12 @@ const Navigation = ({ isScrolled }: NavigationProps) => {
   const router = useRouter();
 
   const navItems = [
-    { label: "Home", href: "#home" },
-    { label: "Stay Options", href: "#stays" },
-    { label: "Activities", href: "#activities" },
-    { label: "Gallery", href: "#gallery" },
-    { label: "Contact", href: "#contact" },
+    { label: "Home", href: "/#home" },
+    { label: "Stay Options", href: "/#stays" },
+    { label: "Activities", href: "/#activities" },
+    { label: "Gallery", href: "/#gallery" },
+    { label: "Blog", href: "/blog" },
+    { label: "Contact", href: "/#contact" },
   ];
 
   return (
@@ -39,7 +41,7 @@ const Navigation = ({ isScrolled }: NavigationProps) => {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.label}
                 href={item.href}
                 className={`font-medium transition-colors duration-300 ${
@@ -49,7 +51,7 @@ const Navigation = ({ isScrolled }: NavigationProps) => {
                 }`}
               >
                 {item.label}
-              </a>
+              </Link>
             ))}
             <Button
               className="px-8 py-4 bg-emerald-600 text-white font-medium rounded-full hover:bg-emerald-700 transition-all duration-300 hover:shadow-lg hover:scale-105"
@@ -85,14 +87,14 @@ const Navigation = ({ isScrolled }: NavigationProps) => {
           <div className="lg:hidden mt-4 pb-4 bg-white/95 backdrop-blur-md rounded-lg shadow-lg">
             <div className="flex flex-col space-y-4 p-4">
               {navItems.map((item) => (
-                <a
+                <Link
                   key={item.label}
                   href={item.href}
                   className="text-emerald-700 hover:text-emerald-900 font-medium transition-colors duration-300"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {item.label}
-                </a>
+                </Link>
               ))}
               <Button
                 className="px-8 py-4 h-max bg-emerald-600 text-white font-medium rounded-full hover:bg-emerald-700 transition-all duration-300 hover:shadow-lg hover:scale-105 w-full mt-4"

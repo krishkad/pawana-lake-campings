@@ -124,6 +124,189 @@
   html {
     @apply scroll-smooth;
   }
+
+
+
+   .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  /* Enhanced Blog Content Styling for SEO */
+  .blog-content {
+    @apply text-gray-800 leading-relaxed;
+  }
+
+  .blog-content h1 {
+    @apply text-3xl md:text-4xl font-bold text-gray-900 mb-6 mt-8 leading-tight;
+  }
+
+  .blog-content h2 {
+    @apply text-2xl md:text-3xl font-bold text-gray-900 mb-4 mt-8 leading-tight;
+    scroll-margin-top: 100px;
+  }
+
+  .blog-content h3 {
+    @apply text-xl md:text-2xl font-semibold text-gray-800 mb-3 mt-6 leading-tight;
+  }
+
+  .blog-content h4 {
+    @apply text-lg md:text-xl font-semibold text-gray-800 mb-2 mt-4;
+  }
+
+  .blog-content p {
+    @apply mb-4 leading-relaxed text-gray-700;
+  }
+
+  .blog-content .lead {
+    @apply text-xl md:text-2xl font-medium text-gray-700 mb-8 leading-relaxed;
+  }
+
+  .blog-content ul {
+    @apply mb-6 ml-6 space-y-2;
+  }
+
+  .blog-content li {
+    @apply text-gray-700 leading-relaxed;
+    list-style-type: disc;
+  }
+
+  .blog-content ol {
+    @apply mb-6 ml-6 space-y-2;
+  }
+
+  .blog-content ol li {
+    list-style-type: decimal;
+  }
+
+  .blog-content strong {
+    @apply font-semibold text-gray-900;
+  }
+
+  .blog-content blockquote {
+    @apply border-l-4 border-emerald-500 pl-6 py-2 mb-6 italic text-gray-700 bg-emerald-50 rounded-r-lg;
+  }
+
+  .blog-content blockquote cite {
+    @apply block mt-2 text-sm font-medium text-gray-600 not-italic;
+  }
+
+  /* Callout Boxes for Better Content Structure */
+  .callout {
+    @apply p-6 mb-6 rounded-lg border-l-4;
+  }
+
+  .callout h4 {
+    @apply font-semibold mb-3 text-lg;
+  }
+
+  .callout p {
+    @apply mb-2 last:mb-0;
+  }
+
+  .callout ul {
+    @apply mb-2 ml-4;
+  }
+
+  .callout-tip {
+    @apply bg-blue-50 border-blue-500;
+  }
+
+  .callout-tip h4 {
+    @apply text-blue-800;
+  }
+
+  .callout-tip p {
+    @apply text-blue-700;
+  }
+
+  .callout-warning {
+    @apply bg-yellow-50 border-yellow-500;
+  }
+
+  .callout-warning h4 {
+    @apply text-yellow-800;
+  }
+
+  .callout-warning p {
+    @apply text-yellow-700;
+  }
+
+  .callout-success {
+    @apply bg-green-50 border-green-500;
+  }
+
+  .callout-success h4 {
+    @apply text-green-800;
+  }
+
+  .callout-success p {
+    @apply text-green-700;
+  }
+
+  .callout-info {
+    @apply bg-gray-50 border-gray-500;
+  }
+
+  .callout-info h4 {
+    @apply text-gray-800;
+  }
+
+  .callout-info p {
+    @apply text-gray-700;
+  }
+
+  .callout-highlight {
+    @apply bg-emerald-50 border-emerald-500;
+  }
+
+  .callout-highlight h4 {
+    @apply text-emerald-800;
+  }
+
+  .callout-highlight p {
+    @apply text-emerald-700;
+  }
+
+  /* Responsive Images */
+  .blog-content img {
+    @apply w-full h-auto rounded-lg shadow-md mb-6;
+  }
+
+  /* Better Table Styling */
+  .blog-content table {
+    @apply w-full border-collapse border border-gray-300 mb-6;
+  }
+
+  .blog-content th {
+    @apply bg-gray-50 border border-gray-300 px-4 py-2 font-semibold text-left;
+  }
+
+  .blog-content td {
+    @apply border border-gray-300 px-4 py-2;
+  }
+
+  /* Code Styling */
+  .blog-content code {
+    @apply bg-gray-100 px-2 py-1 rounded text-sm font-mono;
+  }
+
+  .blog-content pre {
+    @apply bg-gray-100 p-4 rounded-lg overflow-x-auto mb-6;
+  }
+
+  .blog-content pre code {
+    @apply bg-transparent p-0;
+  }
 }
 
 /* === Keyframes === */

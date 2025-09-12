@@ -7,40 +7,76 @@ import { Star, ChevronLeft, ChevronRight } from 'lucide-react';
 const Testimonials = () => {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
 
+  // const testimonials = [
+  //   {
+  //     id: 1,
+  //     name: "Sarah & Michael Thompson",
+  //     location: "San Francisco, CA",
+  //     rating: 5,
+  //     text: "Wildwood Retreat exceeded every expectation. The Safari Luxury Tent was incredible - waking up to mountain views while enjoying hotel-level comfort was magical. The stargazing experience was the highlight of our anniversary trip.",
+  //     image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  //   },
+  //   {
+  //     id: 2,
+  //     name: "Jennifer Walsh",
+  //     location: "Denver, CO",
+  //     text: "As a solo traveler, I felt completely safe and welcomed. The Forest Cottage was my perfect sanctuary - cozy fireplace, amazing forest views, and the staff made sure I had everything I needed. Already planning my return visit!",
+  //     rating: 5,
+  //     image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
+  //   },
+  //   {
+  //     id: 3,
+  //     name: "The Rodriguez Family",
+  //     location: "Austin, TX",
+  //     text: "Our kids still talk about the Riverside Dome! The transparent ceiling for stargazing was incredible, and being right by the river made for perfect family moments. The hiking trails were well-marked and fun for all ages.",
+  //     rating: 5,
+  //     image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
+  //   },
+  //   {
+  //     id: 4,
+  //     name: "Emma Chen",
+  //     location: "Seattle, WA",
+  //     text: "The photography workshops here are world-class! I captured some of my best wildlife shots, and the guides really knew their craft. The accommodations were luxurious - a perfect blend of adventure and comfort.",
+  //     rating: 5,
+  //     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
+  //   }
+  // ];
+
+
   const testimonials = [
-    {
-      id: 1,
-      name: "Sarah & Michael Thompson",
-      location: "San Francisco, CA",
-      rating: 5,
-      text: "Wildwood Retreat exceeded every expectation. The Safari Luxury Tent was incredible - waking up to mountain views while enjoying hotel-level comfort was magical. The stargazing experience was the highlight of our anniversary trip.",
-      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-    },
-    {
-      id: 2,
-      name: "Jennifer Walsh",
-      location: "Denver, CO",
-      text: "As a solo traveler, I felt completely safe and welcomed. The Forest Cottage was my perfect sanctuary - cozy fireplace, amazing forest views, and the staff made sure I had everything I needed. Already planning my return visit!",
-      rating: 5,
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
-    },
-    {
-      id: 3,
-      name: "The Rodriguez Family",
-      location: "Austin, TX",
-      text: "Our kids still talk about the Riverside Dome! The transparent ceiling for stargazing was incredible, and being right by the river made for perfect family moments. The hiking trails were well-marked and fun for all ages.",
-      rating: 5,
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
-    },
-    {
-      id: 4,
-      name: "Emma Chen",
-      location: "Seattle, WA",
-      text: "The photography workshops here are world-class! I captured some of my best wildlife shots, and the guides really knew their craft. The accommodations were luxurious - a perfect blend of adventure and comfort.",
-      rating: 5,
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
-    }
-  ];
+  {
+    id: 1,
+    name: "Rohan & Sneha Patil",
+    location: "Pune, Maharashtra",
+    rating: 5,
+    text: "This was our best weekend getaway ever! The tents were clean, food was delicious, and the lake view at sunset was stunning. Will definitely visit again!",
+    image: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=387&q=80"
+  },
+  {
+    id: 2,
+    name: "Neha Sharma",
+    location: "Mumbai, Maharashtra",
+    rating: 5,
+    text: "As a solo traveler, I felt completely safe and welcomed. The hosts were super friendly, and the bonfire night was unforgettable. Highly recommended!",
+    image: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=387&q=80"
+  },
+  {
+    id: 3,
+    name: "Ankit & Priya Deshmukh",
+    location: "Kamshet, Maharashtra",
+    rating: 5,
+    text: "We celebrated our anniversary here, and it couldn’t have been more perfect. Stargazing by the lake and the late-night BBQ made it magical.",
+    image: "https://images.unsplash.com/photo-1624610806209-82a4cbb4339a?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    id: 4,
+    name: "The Kulkarni Family",
+    location: "Lonavala, Maharashtra",
+    rating: 5,
+    text: "The kids loved the games and the morning breakfast. It’s a perfect escape for families. Peaceful, clean, and beautifully organized!",
+    image: "https://images.unsplash.com/photo-1652278623788-1a876f493b31?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+];
 
   useEffect(() => {
     const interval = setInterval(() => {

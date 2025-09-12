@@ -155,6 +155,10 @@ const Gallery = () => {
           </div>
         </div>
       )}
+
+      <div className="w-max-4xl grid-cols0-1 sm:grid-cols-2 gap-4">
+        
+      </div>
     </section>
   );
 };

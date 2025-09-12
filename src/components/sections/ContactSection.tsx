@@ -15,8 +15,7 @@ const Contact = () => {
     message: "",
   });
 
-
-   const adminPhoneNumber = '919373526309'; // Change to your number (no +)
+  const adminPhoneNumber = "919373526309"; // Change to your number (no +)
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -68,14 +67,14 @@ Message: ${formData.message}`;
               </h3>
               <div className="space-y-6">
                 <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center">
+                  <div className="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center shrink-0">
                     <MapPin className="w-5 h-5 text-emerald-600" />
                   </div>
                   <div>
                     <p className="font-medium text-emerald-800">Address</p>
                     <p className="text-emerald-600">
-                      Pawna lake camping, Pawna nagar, Tq Maval ( Lonavala )
-                      Dist Pune
+                      Thakursai Pavananagar  <br /> Road Near Vaishnavi Hotel, <br className="max-sm:hidden" /> Swami
+                      Samarth Road Pawna Lake Camping,<br className="max-sm:hidden" /> Maharashtra Pune- 410 406
                     </p>
                   </div>
                 </div>

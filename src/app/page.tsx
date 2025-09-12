@@ -1,49 +1,20 @@
 "use client";
+import ChatBot from "@/components/ChatBot";
 import { AboutSection } from "@/components/sections/AboutSection";
-import { DayTimelineSection } from "@/components/sections/DayTimelineSection";
 import { ActivitiesSection } from "@/components/sections/ActivitiesSection";
-import Gallery from "@/components/sections/GallerySection";
+import BlogSection from "@/components/sections/BlogSection";
 import Booking from "@/components/sections/BookingsSection";
-import { HeroSection } from "@/components/sections/HeroSection";
 import { CampOptionsSection } from "@/components/sections/CampOptionsSection";
 import Contact from "@/components/sections/ContactSection";
-import { Footer } from "@/components/sections/Footer";
+import { DayTimelineSection } from "@/components/sections/DayTimelineSection";
+import FloatingActions from "@/components/sections/FloatingActions";
+import Gallery from "@/components/sections/GallerySection";
+import { HeroSection } from "@/components/sections/HeroSection";
 import Testimonials from "@/components/sections/TestimonialsSection";
-import Navigation from "@/components/sections/Navbar";
-import { useEffect, useState } from "react";
+import VideoSection from "@/components/sections/VideoSection";
 import Head from "next/head";
 
 const Home = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  useEffect(() => {
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: "0px 0px -50px 0px",
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("revealed");
-        }
-      });
-    }, observerOptions);
-
-    const elements = document.querySelectorAll(".scroll-reveal");
-    elements.forEach((el) => observer.observe(el));
-
-    return () => observer.disconnect();
-  }, []);
   return (
     <>
       <Head>
@@ -88,7 +59,7 @@ const Home = () => {
         />
         <meta
           name="twitter:image"
-           content="https://www.pawanalakecampsite.in/hero-1.webp"
+          content="https://www.pawanalakecampsite.in/hero-1.webp"
         />
 
         <script type="application/ld+json">
@@ -114,23 +85,46 @@ const Home = () => {
     "longitude": 73.4845
   },
   "telephone": "+91-9876543210",
-  "priceRange": "₹999 - ₹1999"
+  "priceRange": "₹999 - ₹1299"
 }
 `}
         </script>
       </Head>
+
       <div className="min-h-screen">
-        <Navigation isScrolled={isScrolled} />
         <HeroSection />
         <AboutSection />
         <CampOptionsSection />
         <DayTimelineSection />
         <ActivitiesSection />
         <Gallery />
+        <section className="py-20 px-4 bg-white">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16 section-fade-in">
+              <h2 className="font-playfair text-4xl md:text-5xl font-bold text-forest-800 mb-4">
+                Experience the Magic
+              </h2>
+              <p className="text-xl text-forest-600 max-w-3xl mx-auto">
+                Watch and immerse yourself in the tranquil beauty of our
+                glamping retreat
+              </p>
+            </div>
+            <div className="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <VideoSection
+                source="/videos/pawana-lake-video-1.mp4"
+              />
+              <VideoSection
+                source="/videos/pawna-lake-camping-video-2.mp4"
+              />
+            </div>
+          </div>
+        </section>
         <Testimonials />
         <Booking />
+        <BlogSection />
         <Contact />
-        <Footer />
+        <FloatingActions />
+        <ChatBot />
       </div>
     </>
   );
