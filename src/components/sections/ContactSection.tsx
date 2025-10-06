@@ -15,7 +15,7 @@ const Contact = () => {
     message: "",
   });
 
-  const adminPhoneNumber = "919373526309"; // Change to your number (no +)
+  const adminPhoneNumber = "919623288387"; // Change to your number (no +)
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -86,7 +86,7 @@ Message: ${formData.message}`;
                   <div>
                     <p className="font-medium text-emerald-800">Phone</p>
                     <p className="text-emerald-600">
-                      +91 93735 26309 / +91 93735 26309
+                      +91 96232 88387 / +91 96232 88387
                     </p>
                   </div>
                 </div>
@@ -109,7 +109,7 @@ Message: ${formData.message}`;
                   </div>
                   <div>
                     <p className="font-medium text-emerald-800">WhatsApp</p>
-                    <p className="text-emerald-600">+91 93735 26309</p>
+                    <p className="text-emerald-600">+91 96232 88387</p>
                   </div>
                 </div>
               </div>
