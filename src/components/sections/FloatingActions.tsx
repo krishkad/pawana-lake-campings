@@ -33,37 +33,35 @@ const FloatingActions = () => {
     );
   };
 
-//   const scrollToTop = () => {
-//     window.scrollTo({
-//       top: 0,
-//       behavior: "smooth",
-//     });
-//   };
+  
 
   if (!isVisible) return null;
 
   return (
-    <div className="fixed bottom-[90px] right-6 z-50 flex flex-col space-y-3">
-    
+    <div className="fixed bottom-[90px] left-0 right-0 z-50 flex justify-between items-center px-4">
+      {/* WhatsApp Button on the left */}
+      <div className="flex items-center ">
+        <Button
+          onClick={handleWhatsApp}
+          className=" h-12 rounded-full bg-green-500 hover:bg-green-600 text-white shadow-2xl transition-all duration-300 transform "
+          title="WhatsApp Chat"
+        >
+          <span className="text-xl">💬</span>
+          <span className="text-white text-sm font-medium">WhatsApp</span>
+        </Button>
+      </div>
 
-      {/* Call Button */}
-      <Button
-        onClick={handleCall}
-        className="w-14 h-14 rounded-full bg-blue-500 hover:bg-blue-600 text-white shadow-2xl transition-all duration-300 transform hover:scale-110 animate-pulse"
-        title="Call Now"
-      >
-        <span className="text-xl">📞</span>
-      </Button>
-
-      {/* WhatsApp Button */}
-      <Button
-        onClick={handleWhatsApp}
-        className="w-14 h-14 rounded-full bg-green-500 hover:bg-green-600 text-white shadow-2xl transition-all duration-300 transform hover:scale-110 animate-pulse"
-        title="WhatsApp Chat"
-      >
-        <span className="text-xl">💬</span>
-      </Button>
-      {/* <ChatBot /> */}
+      {/* Call Button on the right */}
+      <div className="flex items-center space-x-2">
+        <Button
+          onClick={handleCall}
+          className="h-12 rounded-full bg-blue-500 hover:bg-blue-600 text-white shadow-2xl transition-all duration-300"
+          title="Call Now"
+        >
+          <span className="text-white text-sm font-medium">Call Now</span>
+          <span className="text-xl">📞</span>
+        </Button>
+      </div>
     </div>
   );
 };
