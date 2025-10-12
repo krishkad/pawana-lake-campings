@@ -20,11 +20,11 @@ const FloatingActions = () => {
   }, []);
 
   const handleCall = () => {
-    window.open("tel:+919373526309", "_self");
+    window.open("tel:+919623288387", "_self");
   };
 
   const handleWhatsApp = () => {
-    const phoneNumber = "919373526309";
+    const phoneNumber = "919623288387";
     const message =
       "Hi! I'm interested in your luxury camper van rentals. Could you please help me with booking?";
     window.open(
@@ -38,7 +38,7 @@ const FloatingActions = () => {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed bottom-[90px] left-0 right-0 z-50 flex justify-between items-center px-4">
+    <div className="fixed bottom-[20px] left-0 right-0 z-50 flex justify-between items-center px-4">
       {/* WhatsApp Button on the left */}
       <div className="flex items-center ">
         <Button

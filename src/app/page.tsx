@@ -1,5 +1,4 @@
 "use client";
-import ChatBot from "@/components/ChatBot";
 import { AboutSection } from "@/components/sections/AboutSection";
 import { ActivitiesSection } from "@/components/sections/ActivitiesSection";
 import BlogSection from "@/components/sections/BlogSection";
@@ -124,7 +123,6 @@ const Home = () => {
         <BlogSection />
         <Contact />
         <FloatingActions />
-        <ChatBot />
       </div>
     </>
   );
