@@ -25,41 +25,93 @@ const Gallery = () => {
     }
   }, [api, selectedImageIndex]);
 
-  const images = [
-    {
-      src: "/hero-1.webp",
-      alt: "Mountain vista from luxury tent",
-    },
-    {
-      src: "/hero-2.webp",
-      alt: "Forest cottage exterior",
-    },
-    {
-      src: "/hero-3.webp",
-      alt: "Riverside dome reflection",
-    },
-    {
-      src: "/images/boat-1.webp",
-      alt: "Wildlife deer in nature",
-    },
-    {
-      src: "/images/pawana-lake-nature.webp",
-      alt: "Towering pine forest",
-    },
-    {
-      src: "/images/pawana-lake-camping-1.webp",
-      alt: "Evening campfire ambiance",
-    },
-    {
-      src: "/images/camp-3.webp",
-      alt: "Misty mountain morning",
-    },
-    {
-      src: "/images/camp-4.webp",
-      alt: "Golden hour landscape",
-    },
-  ];
+  // const images = [
+  //   {
+  //     src: "/hero-1.webp",
+  //     alt: "Mountain vista from luxury tent",
+  //   },
+  //   {
+  //     src: "/hero-2.webp",
+  //     alt: "Forest cottage exterior",
+  //   },
+  //   {
+  //     src: "/hero-3.webp",
+  //     alt: "Riverside dome reflection",
+  //   },
+  //   {
+  //     src: "/images/boat-1.webp",
+  //     alt: "Wildlife deer in nature",
+  //   },
+  //   {
+  //     src: "/images/pawana-lake-nature.webp",
+  //     alt: "Towering pine forest",
+  //   },
+  //   {
+  //     src: "/images/pawana-lake-camping-1.webp",
+  //     alt: "Evening campfire ambiance",
+  //   },
+  //   {
+  //     src: "/images/camp-3.webp",
+  //     alt: "Misty mountain morning",
+  //   },
+  //   {
+  //     src: "/images/camp-4.webp",
+  //     alt: "Golden hour landscape",
+  //   },
+  // ];
 
+  const images = [
+    { src: "/images/new_images/image-1.jpeg", alt: "Image 1" },
+    { src: "/images/new_images/image-2.jpeg", alt: "Image 2" },
+    { src: "/images/new_images/image-3.jpeg", alt: "Image 3" },
+    { src: "/images/new_images/image-4.jpeg", alt: "Image 4" },
+    { src: "/images/new_images/image-5.jpeg", alt: "Image 5" },
+    { src: "/images/new_images/image-6.jpeg", alt: "Image 6" },
+    { src: "/images/new_images/image-7.jpeg", alt: "Image 7" },
+    { src: "/images/new_images/image-8.jpeg", alt: "Image 8" },
+    { src: "/images/new_images/image-9.jpeg", alt: "Image 9" },
+    { src: "/images/new_images/image-10.jpeg", alt: "Image 10" },
+    { src: "/images/new_images/image-11.jpeg", alt: "Image 11" },
+    { src: "/images/new_images/image-12.jpeg", alt: "Image 12" },
+    { src: "/images/new_images/image-13.jpeg", alt: "Image 13" },
+    { src: "/images/new_images/image-14.jpeg", alt: "Image 14" },
+    { src: "/images/new_images/image-15.jpeg", alt: "Image 15" },
+    { src: "/images/new_images/image-16.jpeg", alt: "Image 16" },
+    { src: "/images/new_images/image-17.jpeg", alt: "Image 17" },
+    { src: "/images/new_images/image-18.jpeg", alt: "Image 18" },
+    { src: "/images/new_images/image-19.jpeg", alt: "Image 19" },
+    { src: "/images/new_images/image-20.jpeg", alt: "Image 20" },
+    { src: "/images/new_images/image-21.jpeg", alt: "Image 21" },
+    { src: "/images/new_images/image-22.jpeg", alt: "Image 22" },
+    { src: "/images/new_images/image-23.jpeg", alt: "Image 23" },
+    { src: "/images/new_images/image-24.jpeg", alt: "Image 24" },
+    { src: "/images/new_images/image-25.jpeg", alt: "Image 25" },
+    { src: "/images/new_images/image-26.jpeg", alt: "Image 26" },
+    { src: "/images/new_images/image-27.jpeg", alt: "Image 27" },
+    { src: "/images/new_images/image-28.jpeg", alt: "Image 28" },
+    { src: "/images/new_images/image-29.jpeg", alt: "Image 29" },
+    { src: "/images/new_images/image-30.jpeg", alt: "Image 30" },
+    { src: "/images/new_images/image-31.jpeg", alt: "Image 31" },
+    { src: "/images/new_images/image-32.jpeg", alt: "Image 32" },
+    { src: "/images/new_images/image-33.jpeg", alt: "Image 33" },
+    { src: "/images/new_images/image-34.jpeg", alt: "Image 34" },
+    { src: "/images/new_images/image-35.jpeg", alt: "Image 35" },
+    { src: "/images/new_images/image-36.jpeg", alt: "Image 36" },
+    { src: "/images/new_images/image-37.jpeg", alt: "Image 37" },
+    { src: "/images/new_images/image-38.jpeg", alt: "Image 38" },
+    { src: "/images/new_images/image-39.jpeg", alt: "Image 39" },
+    { src: "/images/new_images/image-40.jpeg", alt: "Image 40" },
+    { src: "/images/new_images/image-41.jpeg", alt: "Image 41" },
+    { src: "/images/new_images/image-42.jpeg", alt: "Image 42" },
+    { src: "/images/new_images/image-43.jpeg", alt: "Image 43" },
+    { src: "/images/new_images/image-44.jpeg", alt: "Image 44" },
+    { src: "/images/new_images/image-45.jpeg", alt: "Image 45" },
+    { src: "/images/new_images/image-46.jpeg", alt: "Image 46" },
+    { src: "/images/new_images/image-47.jpeg", alt: "Image 47" },
+    { src: "/images/new_images/image-48.jpeg", alt: "Image 48" },
+    { src: "/images/new_images/image-49.jpeg", alt: "Image 49" },
+    { src: "/images/new_images/image-50.jpeg", alt: "Image 50" },
+  ];
   return (
     <section id="gallery" className="py-20 bg-emerald-50">
       <div className="container mx-auto px-6">
@@ -156,9 +208,7 @@ const Gallery = () => {
         </div>
       )}
 
-      <div className="w-max-4xl grid-cols0-1 sm:grid-cols-2 gap-4">
-        
-      </div>
+      <div className="w-max-4xl grid-cols0-1 sm:grid-cols-2 gap-4"></div>
     </section>
   );
 };
