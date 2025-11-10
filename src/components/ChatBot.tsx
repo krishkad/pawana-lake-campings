@@ -90,7 +90,7 @@ const handleSubmit = async (e: React.FormEvent) => {
 *Message:* ${encodeURIComponent(message)}`;
 
     // Owner's WhatsApp number in international format (e.g., +91 for India)
-    const ownerWhatsAppNumber = "919373526309"; // <- replace with your number (no + sign)
+    const ownerWhatsAppNumber = "919623288387"; // <- replace with your number (no + sign)
 
     const whatsappURL = `https://wa.me/${ownerWhatsAppNumber}?text=${whatsappMessage}`;
 

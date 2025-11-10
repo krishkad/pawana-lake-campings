@@ -100,7 +100,7 @@ export const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Contact</h4>
             <ul className="space-y-2 text-slate-300">
-              <li>Phone: +91 93735 26309</li>
+              <li>Phone: +91 96232 88387</li>
               {/* <li>Email: info@pawanalakecamping.com</li> */}
               <li>
                 Address: Thakursai Pavananagar Road Near Vaishnavi Hotel, Swami
