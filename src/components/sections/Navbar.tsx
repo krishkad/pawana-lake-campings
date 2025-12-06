@@ -20,6 +20,7 @@ const Navigation = ({ isScrolled }: NavigationProps) => {
     { label: "Gallery", href: "/#gallery" },
     { label: "Blog", href: "/blog" },
     { label: "Contact", href: "/#contact" },
+    { label: "Terms & Conditions", href: "/terms-and-conditions" },
   ];
 
   return (

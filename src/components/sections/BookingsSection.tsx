@@ -206,6 +206,10 @@ Special Request: ${bookingData.specialRequests}`;
                     * Required fields • We&apos;ll contact you within 24 hours
                     to confirm availability and pricing
                   </p>
+                  <p className="text-sm text-forest-500 mt-4">
+                    <span className="font-bold">Note</span> The advance amount paid is strictly non-refundable in case
+                    of cancellation.
+                  </p>
                 </div>
               </form>
             </CardContent>
