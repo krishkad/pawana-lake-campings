@@ -87,7 +87,7 @@ export const metadata: Metadata = {
   },
   // themeColor: "#10B981", // Tailwind's green-500
   other: {
-    whatsapp: "https://wa.me/919623288387", // WhatsApp contact link
+    whatsapp: "https://wa.me/918237325256", // WhatsApp contact link
     // instagram: "https://instagram.com/yourinstagramhandle", // Replace with your Instagram handle
   },
 };

@@ -42,7 +42,7 @@ const SEOOptimizer = ({ pageType, title, description, keywords, canonicalUrl }: 
         "latitude": "18.7402",
         "longitude": "73.4027"
       },
-      "telephone": "+91-9623288387",
+      "telephone": "+91-8237325256",
       "priceRange": "₹999",
       "amenityFeature": [
         { "@type": "LocationFeatureSpecification", "name": "Luxury Tents" },

@@ -19,7 +19,7 @@ const Booking = () => {
     specialRequests: "",
   });
 
-  const adminPhoneNumber = "919623288387"; // Change to your number (no +)
+  const adminPhoneNumber = "918237325256"; // Change to your number (no +)
 
   const handleBookingSubmit = (e: React.FormEvent) => {
     e.preventDefault();

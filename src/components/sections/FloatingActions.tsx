@@ -20,11 +20,11 @@ const FloatingActions = () => {
   }, []);
 
   const handleCall = () => {
-    window.open("tel:+919623288387", "_self");
+    window.open("tel:+918237325256", "_self");
   };
 
   const handleWhatsApp = () => {
-    const phoneNumber = "919623288387";
+    const phoneNumber = "918237325256";
     const message =
       "Hi! I'm interested in your luxury camper van rentals. Could you please help me with booking?";
     window.open(
